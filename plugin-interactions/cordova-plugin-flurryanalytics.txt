@@ -1,0 +1,157 @@
+> ionic-app-scripts build --target cordova --platform android
+[18:00:30]  ionic-app-scripts 3.2.2 
+[18:00:30]  build dev started ... 
+[18:00:30]  clean started ... 
+[18:00:31]  clean finished in 2 ms 
+[18:00:31]  copy started ... 
+[18:00:31]  deeplinks started ... 
+[18:00:31]  deeplinks finished in 15 ms 
+[18:00:31]  transpile started ... 
+[18:00:34]  transpile finished in 3.40 s 
+[18:00:34]  preprocess started ... 
+[18:00:34]  preprocess finished in 1 ms 
+[18:00:34]  webpack started ... 
+[18:00:34]  copy finished in 3.56 s 
+[18:00:38]  webpack finished in 4.30 s 
+[18:00:38]  sass started ... 
+[18:00:40]  sass finished in 1.26 s 
+[18:00:40]  postprocess started ... 
+[18:00:40]  postprocess finished in 5 ms 
+[18:00:40]  lint started ... 
+[18:00:40]  build dev finished in 9.11 s 
+[18:00:42]  lint finished in 2.24 s 
+> cordova build android
+Checking Java JDK and Android SDK versions
+ANDROID_SDK_ROOT=/home/timur/Android (recommended setting)
+ANDROID_HOME=/home/timur/Android (DEPRECATED)
+Subproject Path: CordovaLib
+Subproject Path: app
+> Task :app:preBuild UP-TO-DATE
+> Task :CordovaLib:preBuild UP-TO-DATE
+> Task :CordovaLib:preDebugBuild UP-TO-DATE
+> Task :CordovaLib:checkDebugManifest UP-TO-DATE
+> Task :CordovaLib:processDebugManifest UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :CordovaLib:compileDebugAidl NO-SOURCE
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :CordovaLib:packageDebugRenderscript NO-SOURCE
+> Task :app:compileDebugRenderscript UP-TO-DATE
+> Task :app:checkDebugManifest UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:prepareLintJar UP-TO-DATE
+> Task :app:generateDebugSources UP-TO-DATE
+> Task :CordovaLib:compileDebugRenderscript UP-TO-DATE
+> Task :CordovaLib:generateDebugBuildConfig UP-TO-DATE
+> Task :CordovaLib:generateDebugResValues UP-TO-DATE
+> Task :CordovaLib:generateDebugResources UP-TO-DATE
+> Task :CordovaLib:packageDebugResources UP-TO-DATE
+> Task :CordovaLib:generateDebugRFile UP-TO-DATE
+> Task :CordovaLib:prepareLintJar UP-TO-DATE
+> Task :CordovaLib:generateDebugSources UP-TO-DATE
+> Task :CordovaLib:javaPreCompileDebug UP-TO-DATE
+> Task :CordovaLib:compileDebugJavaWithJavac UP-TO-DATE
+> Task :CordovaLib:processDebugJavaRes NO-SOURCE
+> Task :CordovaLib:transformClassesAndResourcesWithPrepareIntermediateJarsForDebug UP-TO-DATE
+> Task :app:javaPreCompileDebug
+> Task :app:mainApkListPersistenceDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:processDebugManifest
+> Task :app:processDebugResources
+
+> Task :app:compileDebugJavaWithJavac FAILED
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:35: error: local variable action is accessed from within inner class; needs to be declared final
+                BannerAd bannerAd = (BannerAd) action.getAd();
+                                               ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:38: error: local variable action is accessed from within inner class; needs to be declared final
+                        action.optId(),
+                        ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:39: error: local variable action is accessed from within inner class; needs to be declared final
+                        action.getAdUnitID(),
+                        ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:40: error: local variable action is accessed from within inner class; needs to be declared final
+                        action.getAdSize(),
+                        ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:41: error: local variable action is accessed from within inner class; needs to be declared final
+                        "top".equals(action.optPosition()) ? Gravity.TOP : Gravity.BOTTOM
+                                     ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:44: error: local variable action is accessed from within inner class; needs to be declared final
+                bannerAd.show(action.buildAdRequest());
+                              ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:46: error: local variable callbackContext is accessed from within inner class; needs to be declared final
+                callbackContext.sendPluginResult(result);
+                ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:57: error: local variable action is accessed from within inner class; needs to be declared final
+                BannerAd bannerAd = (BannerAd) action.getAd();
+                                               ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:63: error: local variable callbackContext is accessed from within inner class; needs to be declared final
+                callbackContext.sendPluginResult(result);
+                ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+9 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1s
+24 actionable tasks: 5 executed, 19 up-to-date
+/home/timur/Dev/mobile/myApp/platforms/android/gradlew: Command failed with exit code 1 Error output:
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:35: error: local variable action is accessed from within inner class; needs to be declared final
+                BannerAd bannerAd = (BannerAd) action.getAd();
+                                               ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:38: error: local variable action is accessed from within inner class; needs to be declared final
+                        action.optId(),
+                        ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:39: error: local variable action is accessed from within inner class; needs to be declared final
+                        action.getAdUnitID(),
+                        ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:40: error: local variable action is accessed from within inner class; needs to be declared final
+                        action.getAdSize(),
+                        ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:41: error: local variable action is accessed from within inner class; needs to be declared final
+                        "top".equals(action.optPosition()) ? Gravity.TOP : Gravity.BOTTOM
+                                     ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:44: error: local variable action is accessed from within inner class; needs to be declared final
+                bannerAd.show(action.buildAdRequest());
+                              ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:46: error: local variable callbackContext is accessed from within inner class; needs to be declared final
+                callbackContext.sendPluginResult(result);
+                ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:57: error: local variable action is accessed from within inner class; needs to be declared final
+                BannerAd bannerAd = (BannerAd) action.getAd();
+                                               ^
+/home/timur/Dev/mobile/myApp/platforms/android/app/src/main/java/admob/plugin/ads/BannerAd.java:63: error: local variable callbackContext is accessed from within inner class; needs to be declared final
+                callbackContext.sendPluginResult(result);
+                ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+9 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1s
+[ERROR] An error occurred while running subprocess cordova.
+        
+        cordova build android exited with exit code 1.
+        
+        Re-running this command with the --verbose flag may provide more information.

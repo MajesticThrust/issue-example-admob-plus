@@ -1,0 +1,123 @@
+> ionic-app-scripts build --target cordova --platform android
+[18:03:01]  ionic-app-scripts 3.2.2 
+[18:03:01]  build dev started ... 
+[18:03:01]  clean started ... 
+[18:03:01]  clean finished in 2 ms 
+[18:03:01]  copy started ... 
+[18:03:01]  deeplinks started ... 
+[18:03:01]  deeplinks finished in 16 ms 
+[18:03:01]  transpile started ... 
+[18:03:04]  transpile finished in 3.33 s 
+[18:03:04]  preprocess started ... 
+[18:03:04]  preprocess finished in less than 1 ms 
+[18:03:04]  webpack started ... 
+[18:03:04]  copy finished in 3.49 s 
+[18:03:08]  webpack finished in 4.29 s 
+[18:03:08]  sass started ... 
+[18:03:10]  sass finished in 1.23 s 
+[18:03:10]  postprocess started ... 
+[18:03:10]  postprocess finished in 5 ms 
+[18:03:10]  lint started ... 
+[18:03:10]  build dev finished in 8.98 s 
+[18:03:12]  lint finished in 2.18 s 
+> cordova build android
+Checking Java JDK and Android SDK versions
+ANDROID_SDK_ROOT=/home/timur/Android (recommended setting)
+ANDROID_HOME=/home/timur/Android (DEPRECATED)
+Subproject Path: CordovaLib
+Subproject Path: app
+> Task :app:preBuild UP-TO-DATE
+> Task :CordovaLib:preBuild UP-TO-DATE
+> Task :CordovaLib:preDebugBuild UP-TO-DATE
+> Task :CordovaLib:checkDebugManifest UP-TO-DATE
+> Task :CordovaLib:processDebugManifest UP-TO-DATE
+> Task :app:preDebugBuild
+> Task :CordovaLib:compileDebugAidl NO-SOURCE
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :CordovaLib:packageDebugRenderscript NO-SOURCE
+> Task :app:compileDebugRenderscript UP-TO-DATE
+> Task :app:checkDebugManifest UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:prepareLintJar UP-TO-DATE
+> Task :app:generateDebugSources UP-TO-DATE
+> Task :CordovaLib:compileDebugRenderscript UP-TO-DATE
+> Task :CordovaLib:generateDebugBuildConfig UP-TO-DATE
+> Task :CordovaLib:generateDebugResValues UP-TO-DATE
+> Task :CordovaLib:generateDebugResources UP-TO-DATE
+> Task :CordovaLib:packageDebugResources UP-TO-DATE
+> Task :CordovaLib:generateDebugRFile UP-TO-DATE
+> Task :CordovaLib:prepareLintJar UP-TO-DATE
+> Task :CordovaLib:generateDebugSources UP-TO-DATE
+> Task :CordovaLib:javaPreCompileDebug UP-TO-DATE
+> Task :CordovaLib:compileDebugJavaWithJavac UP-TO-DATE
+> Task :CordovaLib:processDebugJavaRes NO-SOURCE
+> Task :CordovaLib:transformClassesAndResourcesWithPrepareIntermediateJarsForDebug UP-TO-DATE
+> Task :app:javaPreCompileDebug
+> Task :app:mainApkListPersistenceDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:processDebugManifest
+> Task :app:processDebugResources
+
+> Task :app:compileDebugJavaWithJavac
+
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+> Task :app:compileDebugNdk NO-SOURCE
+> Task :app:compileDebugSources
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders UP-TO-DATE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :CordovaLib:mergeDebugShaders UP-TO-DATE
+> Task :CordovaLib:compileDebugShaders UP-TO-DATE
+> Task :CordovaLib:generateDebugAssets UP-TO-DATE
+> Task :CordovaLib:packageDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:signingConfigWriterDebug UP-TO-DATE
+> Task :app:transformClassesWithDexBuilderForDebug
+
+> Task :app:transformDexArchiveWithExternalLibsDexMergerForDebug FAILED
+34 actionable tasks: 9 executed, 25 up-to-date
+D8: Program type already present: android.support.v4.app.INotificationSideChannel
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:transformDexArchiveWithExternalLibsDexMergerForDebug'.
+> com.android.builder.dexing.DexArchiveMergerException: Error while merging dex archives: 
+  Learn how to resolve the issue at https://developer.android.com/studio/build/dependencies#duplicate_classes.
+  Program type already present: android.support.v4.app.INotificationSideChannel
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 7s
+/home/timur/Dev/mobile/myApp/platforms/android/gradlew: Command failed with exit code 1 Error output:
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+D8: Program type already present: android.support.v4.app.INotificationSideChannel
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:transformDexArchiveWithExternalLibsDexMergerForDebug'.
+> com.android.builder.dexing.DexArchiveMergerException: Error while merging dex archives: 
+  Learn how to resolve the issue at https://developer.android.com/studio/build/dependencies#duplicate_classes.
+  Program type already present: android.support.v4.app.INotificationSideChannel
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 7s
+[ERROR] An error occurred while running subprocess cordova.
+        
+        cordova build android exited with exit code 1.
+        
+        Re-running this command with the --verbose flag may provide more information.
